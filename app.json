@@ -1,0 +1,149 @@
+{
+  "expo": {
+    "name": "3elagi",
+    "slug": "3elagi1",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "threelagi",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "linking": {
+      "prefixes": [
+        "threelagi://"
+      ]
+    },
+    "splash": {
+      "image": "./assets/images/splash-logo.png",
+      "backgroundColor": "#f5f7fa",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "buildNumber": "2",
+      "bundleIdentifier": "com.threelagi.mobile",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "threelagi"
+            ]
+          },
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.773972750372-8ggmkp52i76ruevgvtpo0ummg1vttdeo"
+            ]
+          }
+        ]
+      }
+    },
+    "android": {
+      "versionCode": 6,
+      "package": "com.threelagi.mobile",
+      "googleServicesFile": "./google-services.json",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": false,
+          "data": [
+            {
+              "scheme": "com.googleusercontent.apps.773972750372-8ggmkp52i76ruevgvtpo0ummg1vttdeo",
+              "host": "oauth2redirect"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        },
+        {
+          "action": "VIEW",
+          "autoVerify": false,
+          "data": [
+            {
+              "scheme": "threelagi",
+              "host": "oauthredirect"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "RECORD_AUDIO",
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO"
+      ],
+      "softwareKeyboardLayoutMode": "resize",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#3057F2"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withAndroidLaunchBackground.js",
+      "./plugins/withAndroidIncomingCall.js",
+      "@react-native-google-signin/google-signin",
+      "expo-router",
+      "expo-font",
+      "expo-web-browser",
+      "react-native-document-scanner-plugin",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow 3elagi to access your photos and videos for chat and medical records.",
+          "cameraPermission": "Allow 3elagi to use the camera for photos, videos, and medical records."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow 3elagi to record voice messages and dictate text."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "chat-messages",
+          "color": "#0F766E",
+          "sounds": [
+            "./assets/sounds/ringtone.wav",
+            "./assets/sounds/incoming_call.wav"
+          ]
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-logo.png",
+          "backgroundColor": "#f5f7fa",
+          "imageWidth": 280,
+          "android": {
+            "image": "./assets/images/splash-logo.png",
+            "backgroundColor": "#f5f7fa",
+            "imageWidth": 280,
+            "resizeMode": "contain"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0bb1b8ef-f01a-415a-9639-7788882cd311"
+      }
+    }
+  }
+}

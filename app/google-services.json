@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "38411531872",
+    "project_id": "elagi-af6a0",
+    "storage_bucket": "elagi-af6a0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38411531872:android:caf1def9d94f4627837505",
+        "android_client_info": {
+          "package_name": "com.threelagi.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK36-lf5JYDI9CYNwGADtANTyA5d7LId4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
